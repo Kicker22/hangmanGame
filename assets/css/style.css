@@ -1,0 +1,47 @@
+
+body{
+    background: black;
+    background-image: url(/assets/images/retroWave.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.card-body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 3px dashed white;
+}
+
+.card{
+    border: none;
+}
+
+.game-container{
+    height: 540px;
+}
+
+.hint-section{
+    color: white;
+    border: 3px dashed white;
+    border-right: none;
+    background:rgb(0, 0, 0, 0.9)
+}
+
+.hint-title{
+    text-align: center;
+    width: 300px;
+}
+
+.game-body{
+    height: 540px;
+    background: rgb(0, 0, 0,);
+    border-left: 3px dashed white;
+    border-right: 3px dashed white;
+    
+}  
+
+.input-title{
+    text-decoration: underline;
+}
+
