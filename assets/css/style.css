@@ -44,3 +44,18 @@ body{
     text-decoration: underline;
 }
 
+.wins-container{
+    float: left;
+    width: 250px;
+    border: 1px dashed white;
+}
+.loss-container{
+    float: right;
+    width: 250px;
+    border: 1px dashed white;
+}
+.lettersGuessed-container{
+    width: 250px;
+    border-right: 3px dashed white;
+}
+
