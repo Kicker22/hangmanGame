@@ -1,12 +1,12 @@
-const possibleWords = ["cat", "dog", "lizard", "bear"];
+const possibleWords = ["retro", "delorean", "neon", "dystopia"];
 var random = Math.floor(Math.random() * possibleWords.length);
 let chosenWord = possibleWords[random];
 var underScore = [];
-console.log(chosenWord)
 
 
 function initGame(){
     setUnderScore()
+    keyUpListener()
 }
 
 initGame()
@@ -15,8 +15,22 @@ initGame()
 function setUnderScore(){
     for(let i = 0; i < chosenWord.length; i++){
         underScore.push(' _ ' +' ' + ' ')
-        console.log(chosenWord)
         document.getElementById("word").innerText = underScore;
-        console.log(underScore)
     }
 }
+
+
+
+
+function keyUpListener(){
+var currentWord = document.getElementById('word')
+console.log(currentWord)
+    document.onkeyup = function(){
+        var userGuesses = event.key;
+        console.log(userGuesses)
+
+        
+
+    }
+}
+    
