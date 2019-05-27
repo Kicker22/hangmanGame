@@ -2,6 +2,7 @@ const possibleWords = ["retro", "delorean", "neon", "dystopia"];
 var random = Math.floor(Math.random() * possibleWords.length);
 let chosenWord = possibleWords[random];
 var underScore = [];
+var lettersGuessed = [];
 
 
 function initGame(){
@@ -21,16 +22,18 @@ function setUnderScore(){
 
 
 
-
+//create a key listener event that listens for keyup 
 function keyUpListener(){
-var currentWord = document.getElementById('word')
-console.log(currentWord)
-    document.onkeyup = function(){
-        var userGuesses = event.key;
-        console.log(userGuesses)
-
-        
-
+    var guessedWord = document.getElementById('word')
+    document.onkeyup = function(event){
+        lettersGuessed.push(event.key)
+        for(i = 0; i < guessedWord.lentgh; i++){
+            if(lettersGuessed.includes(chosenWord[i])){
+                chosenWord = chosenWord + guessedWord[i] + ' '
+            }
+        }
+        document.getElementById('word').textContent = lettersGuessed[i] + underScore;
+        console.log(lettersGuessed)
     }
 }
     
