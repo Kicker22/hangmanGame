@@ -1,4 +1,4 @@
-let possibleWords = ["retro", "delorean", "neon", "dystopia"];
+let possibleWords = ["cleric","paladin", "dungeon", "sword", "rouge"];
 var random = Math.floor(Math.random() * possibleWords.length);
 let currentWord ='neon';
 let wins = 0;
@@ -25,7 +25,8 @@ function wordHasBeenGuessed(){
         return true;
     }
 }
-        //initial code i made up thats sorta worked. but staticaly placed _ for every letter 
+
+//initial code i made up thats sorta worked. but staticaly placed _ for every letter 
 // //create underscores based on word length
 // function setUnderScore(){
 //     for(let i = 0; i < chosenWord.length; i++){
@@ -48,12 +49,13 @@ function eventListener(){
         if(wordHasBeenGuessed()){
             correctLetters++
             console.log(correctLetters)
-            ifUserWins()
             console.log(wins)
             initGame()
         }
+        
         shouldGuessesGoDown(e.key)
-        console.log(currentWord, lettersGuessed, guessesRemaining)
+        ifUserWins()
+        console.log(correctLetters,currentWord, lettersGuessed, guessesRemaining)
         updateDOM()
         checkIfUserLost()
     }
@@ -68,8 +70,8 @@ function checkIfUserLost(){
 
 function ifUserWins(){
     if (correctLetters == currentWord.length){
-        alert('you Win!')
         wins++
+        alert("winner winner chicken dinner")
         document.getElementById('current-wins').textContent = wins
     }
 }
