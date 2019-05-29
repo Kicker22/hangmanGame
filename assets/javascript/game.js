@@ -1,8 +1,9 @@
-let possibleWords = ["cleric","paladin", "dungeon", "sword", "rouge"];
+let possibleWords = ["cleric","paladin", "dungeon", "sword", "rouge","dice","critical", "dragon", "elf", "dwarf", "halfling", "gnome", "human", "bard" ,
+"druid", "fighter", "ranger"];
 var random = Math.floor(Math.random() * possibleWords.length);
 let currentWord ='neon';
 let wins = 0;
-let correctLetters = 0;
+let correctLetters = [];
 let guessesRemaining = 10;
 var lettersGuessed = [];
 
@@ -26,7 +27,7 @@ function wordHasBeenGuessed(){
     }
 }
 
-//initial code i made up thats sorta worked. but staticaly placed _ for every letter 
+//initial code I made up that sorta worked. but staticaly placed _ for every letter.... so not really
 // //create underscores based on word length
 // function setUnderScore(){
 //     for(let i = 0; i < chosenWord.length; i++){
@@ -47,9 +48,6 @@ function eventListener(){
     document.onkeyup = function(e){
         lettersGuessed.push(e.key)
         if(wordHasBeenGuessed()){
-            correctLetters++
-            console.log(correctLetters)
-            console.log(wins)
             initGame()
         }
         
@@ -69,11 +67,13 @@ function checkIfUserLost(){
 }
 
 function ifUserWins(){
-    if (correctLetters == currentWord.length){
-        wins++
-        alert("winner winner chicken dinner")
-        document.getElementById('current-wins').textContent = wins
+    for(i = 0; i < currentWord.length; i++)
+    if(lettersGuessed[i] === currentWord.length){
+
+        alert("critial win!!")
     }
+        
+    
 }
 
 // this function determins if current word containes keypress letter and if not -1 from remianing guesses
