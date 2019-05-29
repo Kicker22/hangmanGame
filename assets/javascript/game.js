@@ -52,7 +52,7 @@ function eventListener(){
         }
         
         shouldGuessesGoDown(e.key)
-        ifUserWins()
+        // ifUserWins()
         console.log(correctLetters,currentWord, lettersGuessed, guessesRemaining)
         updateDOM()
         checkIfUserLost()
@@ -66,15 +66,15 @@ function checkIfUserLost(){
     }
 }
 
-function ifUserWins(){
-    for(i = 0; i < currentWord.length; i++)
-    if(lettersGuessed[i] === currentWord.length){
+// function ifUserWins(){
+//     for(i = 0; i < currentWord.length; i++)
+//     if(lettersGuessed[i] === currentWord.length){
 
-        alert("critial win!!")
-    }
+//         alert("critial win!!")
+//     }
         
     
-}
+// }
 
 // this function determins if current word containes keypress letter and if not -1 from remianing guesses
 function shouldGuessesGoDown(lettersGuessed){
