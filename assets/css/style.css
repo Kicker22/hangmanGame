@@ -15,16 +15,19 @@ body{
     background: transparent;
     border: 2px dashed white;
     color: white;
+   
 }
-    
 
 
 .game-container{
     padding: 15px;
     margin: auto;
     width: 50%;
+    border: 3px dashed whitesmoke;
     background: rgb(0, 0, 0, 0.9);
+    
 }
+
 
 .currentWord{
     width: 50%;
@@ -32,7 +35,18 @@ body{
     border: 2px dashed white;
     color: white;
     background: rgb(0, 0, 0, 0.9);
+    animation: glow 2s infinite alternate;
 }
+
+@keyframes glow{
+    from{
+        box-shadow: 0 0 5px -5px gold ;
+    }
+    to{
+        box-shadow: 0 0 5px 5px gold;
+    }
+}
+
 
 .letters{
     width: 50%;
@@ -40,6 +54,7 @@ body{
     border: 2px dashed white;
     color: white;
     background: rgb(0, 0, 0, 0.9);
+    animation: glow 2.5s infinite alternate;
 }
 
 .total-wins{
@@ -56,5 +71,6 @@ body{
     border: 2px dashed white;
     color: white;
     background: rgb(0, 0, 0, 0.9);
+    animation: glow 3s infinite alternate;
 }
 

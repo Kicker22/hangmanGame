@@ -53,7 +53,7 @@ function eventListener(){
         
         shouldGuessesGoDown(e.key)
         // ifUserWins()
-        console.log(correctLetters,currentWord, lettersGuessed, guessesRemaining)
+        console.log(currentWord, lettersGuessed, guessesRemaining)
         updateDOM()
         checkIfUserLost()
     }
